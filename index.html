@@ -35,19 +35,35 @@
         }
         console.log('end : '+platform);
     }
-    function getPlatform() {
-       var platform = ["Win32", "Android", "iOS"];
+    // function getPlatform() {
+    //    var platform = ["Win32", "Android", "iOS"];
     
-       for (var i = 0; i < platform.length; i++) {
+    //    for (var i = 0; i < platform.length; i++) {
     
-           if (navigator.platform.indexOf(platform[i]) >- 1) {
+    //        if (navigator.platform.indexOf(platform[i]) >- 1) {
     
-               return platform[i];
-           }
-       }
+    //            return platform[i];
+    //        }
+    //    }
+    // }
+    function getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    if (/android/i.test(userAgent)) {
+        return "Android";
+    }
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+    }
+
+    if (/windows phone/i.test(userAgent)) {
+        return "Windows";
+    }
+
+    return "Windows";
     }
     
-    window.onload = clickit(getPlatform());
+    window.onload = clickit(getMobileOperatingSystem());
     
     </script>
     <a id='plot-and-link' href="intent://channel/UCkcSreQ7Q69-Jv1KoE25mpg/#Intent;scheme=vnd.youtube;package=com.google.android.youtube;S.browser_fallback_url=market://details?id=com.google.android.youtube;end;">plotpoint youtube android</a>
