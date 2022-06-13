@@ -1,35 +1,24 @@
 <script>
 
-function clickit(platform)
+function clickit()
 {
-    if(platform=='Android')
-    {
-        document.getElementById("plot-and-link").click();
-    }
-    else if(platform=='iOS')
-    {
-        document.getElementById("plot-ios-link").click();   
-    }
-    else
-    {
-        document.getElementById("plot-win-link").click();  
-    }
+    document.getElementById("plot-link").click();  
 }
-function getPlatform() {
-   var platform = ["Win32", "Android", "iOS"];
+// function getPlatform() {
+//    var platform = ["Win32", "Android", "iOS"];
 
-   for (var i = 0; i < platform.length; i++) {
+//    for (var i = 0; i < platform.length; i++) {
 
-       if (navigator.platform.indexOf(platform[i]) >- 1) {
+//        if (navigator.platform.indexOf(platform[i]) >- 1) {
 
-           return platform[i];
-       }
-   }
-}
+//            return platform[i];
+//        }
+//    }
+// }
 
-window.onload = clickit(getPlatform);
+window.onload = clickit();
 
 </script>
-<a id='plot-and-link' href="intent://channel/UCkcSreQ7Q69-Jv1KoE25mpg/#Intent;scheme=vnd.youtube;package=com.google.android.youtube;S.browser_fallback_url=market://details?id=com.google.android.youtube;end;">plotpoint youtube android</a>
-<a id='plot-ios-link' href="youtube://www.youtube.com/channel/UCkcSreQ7Q69-Jv1KoE25mpg>">plotpoint youtube ios</a>
-<a id='plot-win-link' href="https://www.youtube.com/channel/UCkcSreQ7Q69-Jv1KoE25mpg">plotpoint youtube browser</a>
+<!-- <a id='plot-and-link' href="intent://channel/UCkcSreQ7Q69-Jv1KoE25mpg/#Intent;scheme=vnd.youtube;package=com.google.android.youtube;S.browser_fallback_url=market://details?id=com.google.android.youtube;end;">plotpoint youtube android</a> -->
+<!-- <a id='plot-ios-link' href="youtube://www.youtube.com/channel/UCkcSreQ7Q69-Jv1KoE25mpg>">plotpoint youtube ios</a> -->
+<a id='plot-link' href="https://www.youtube.com/channel/UCkcSreQ7Q69-Jv1KoE25mpg">plotpoint youtube browser</a>
