@@ -1,14 +1,27 @@
 <script>
 
 function clickit(platform)
-{
-    console.log(platform);  
+{  
+    console.log('start: '+ platform);
     if(platform=='Android')
+    {
+        console.log(platform);
         document.getElementById("plot-and-link").click(); 
+        console.log(platform);
+    }
     else if(platform=='iOS')
+    {
+        console.log(platform);
         document.getElementById("plot-ios-link").click();
+        console.log(platform);
+    }
     else
+    {
+        console.log(platform);
         document.getElementById('plot-win-link').click();
+        console.log(platform);
+    }
+    console.log('end : '+platform);
 }
 function getPlatform() {
    var platform = ["Win32", "Android", "iOS"];
